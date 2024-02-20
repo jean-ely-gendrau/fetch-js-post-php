@@ -1,14 +1,12 @@
 <?php
 header('Content-Type: application/json;charset=utf-8');
 
-$data = file_get_contents("php://input"); // Réception des données du header
-$data = json_decode($data, true);  // Converseion des données json en tableau associatif
-
-// Si il y à des données
-if ($data) {
+// Si $_POST['id'] existe
+if (isset($_POST['id'])) {
   $returnData = [];
 
-  foreach ($data as $keyData => $valData) {
+  // On parcourt le tableau global $_POST
+  foreach ($_POST as $keyData => $valData) {
     $valData = is_numeric($valData) ? intval($valData) + 1 : $valData; // Si c'est un nombre on l'incrémente de 1
     $returnData[$keyData] = "Valeur traîter avec php : {$valData}"; // On modifie la valeur de notre tableau de données
   }

@@ -10,7 +10,7 @@ async function postJs({ slug, data }) {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: data
+      body: Object.entries(data)
         .map(([key, val], index) => {
           return `${key}=${val};`;
         })
