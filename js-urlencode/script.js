@@ -18,7 +18,7 @@ async function postJs({ slug, data }) {
     }
   );
 
-  const response = res.json(); // res.json()
+  const response = await res.json(); // res.json()
   return response;
 }
 
