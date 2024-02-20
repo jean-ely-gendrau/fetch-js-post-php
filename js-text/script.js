@@ -14,7 +14,7 @@ async function postJs({ slug, data }) {
     }
   );
 
-  const response = request.text();
+  const response = request.text(); // request.text()
   return response;
 }
 
@@ -25,6 +25,7 @@ const buttonPost = (e) => {
     slug: "jsPhp.php",
     data: { id: 1, action: "test" },
   }).then((data) => {
+    console.log(data); // Affichage des données encodées en console
     let decode = JSON.parse(atob(data)); // Décode et parse les données
 
     let stringRetunr = Object.entries(decode).join(" - ").toString();

@@ -1,7 +1,7 @@
 // Function asynchrone fetch
 // method : POST
-// headers: "{Content-Type": "application/json",}
-// body: JSON.stringify(data),
+// headers: "{Content-Type": "application/x-www-form-urlencoded",}
+// body: Object.entries(data).map(([key, val], index) => ....
 async function postJs({ slug, data }) {
   const request = await fetch(
     `http://${window.location.hostname}/php-post-js/js-urlencode/${slug}`,

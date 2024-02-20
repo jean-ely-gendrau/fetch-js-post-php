@@ -1,7 +1,7 @@
 // Function asynchrone fetch
 // method : POST
-// headers: "{Content-Type": "application/json",}
-// body: JSON.stringify(data),
+// headers: "{Content-Type": "application/x-www-form-urlencoded",}
+// body: Object.entries(data).map(([key, val], index) => ....
 async function postJs({ slug, data }) {
   const request = await fetch(
     `http://${window.location.hostname}/php-post-js/js-urlencode/${slug}`,
@@ -29,7 +29,6 @@ const buttonPost = (e) => {
     slug: "jsPhp.php",
     data: { id: 1, action: "test" },
   }).then((data) => {
-    console.log(data);
     let stringRetunr = Object.entries(data).join(" - ").toString();
     // On joint et on transfome en chaîne de caractère le résultat
     // des données traiter par php, affichage en console
