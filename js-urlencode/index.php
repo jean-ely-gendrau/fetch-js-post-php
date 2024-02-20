@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <p>API fetch JS avec la méthod post avec un objet Json et réception des données avec PHP</p>
+  <p>API fetch JS avec la méthode post avec un objet Json et réception des données avec PHP</p>
 
   <button id="postJs">Post</button>
   <!-- ADD SCRIPT -->

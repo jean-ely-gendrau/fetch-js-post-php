@@ -4,7 +4,7 @@
 // body: JSON.stringify(data),
 async function postJs({ slug, data }) {
   const request = await fetch(
-    `http://${window.location.hostname}/php-post-js/js-json/${slug}`,
+    `http://${window.location.hostname}js-json/${slug}`,
     {
       method: "POST",
       headers: {

@@ -9,17 +9,17 @@
 </head>
 
 <body>
-  <p>API fetch JS avec la méthod post avec un objet Json et réception des données avec PHP</p>
+  <p>API fetch JS avec la méthode post avec un objet Json et réception des données avec PHP</p>
 
-  <form id="form">
+  <form id="form" enctype="multipart/form-data">
     <input type="text" id="nom" name="nom">
     <input type="text" id="prenom" name="prenom">
     <input type="email" id="email" name="email">
     <input type="password" id="password" name="password">
     <input type="password" id="passwordCompare" name="passwordCompare">
+    <button id="postJs">Post</button>
   </form>
 
-  <button id="postJs">Post</button>
   <!-- ADD SCRIPT -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="./script.js"></script>
