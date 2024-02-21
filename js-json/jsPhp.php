@@ -5,7 +5,7 @@ $data = file_get_contents("php://input"); // Réception des données du header
 $data = json_decode($data, true);  // Conversion des données json en tableau associatif
 
 // Si il y à des données
-if ($data['test']) {
+if (isset($data['action']) && $data['action'] === 'test') {
   $returnData = [];
 
   foreach ($data as $keyData => $valData) {

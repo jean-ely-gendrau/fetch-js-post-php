@@ -1,3 +1,14 @@
+<?php
+$phpSnippetJson = htmlspecialchars('<?php
+//... autre code ici
+$data = file_get_contents("php://input"); // Réception des données du header 
+$data = json_decode($data, true);  // Conversion des données json en tableau associatif
+//... autre code ici
+?>');
+$phpSnippetCondition = htmlspecialchars('if (isset($data[\'action\']) && $data[\'action\'] === \'test\') {
+  // ...ici les action à exécuter si la condition est valide
+}');
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,6 +21,31 @@
 
 <body class="d-flex flex-column justify-content-center align-items-center">
   <p class="p-2 mb-2">API fetch JS avec la méthod post avec un objet Json et réception des données avec PHP</p>
+
+  <h2 class="p-2 mb-2">Détails de cheminement</h2>
+
+  <ul class="p-2 mb-2">
+    <li class="p-1 mb-1"> Lors de l'appuie sur post</li>
+    <li class="p-1 mb-1"> En arrière plan JS reçois capte un événement addEventListener click</li>
+    <li class="p-1 mb-1"> Il exécute la function buttonPost qui fait un appel à postJs avec les paramètre de la requête</li>
+    <li class="p-1 mb-1"> Une requête est alors émise avec la fetch méthode de l'API fetch vers la route définit (jsPhp.php)</li>
+    <li class="p-1 mb-1"> La page jsPhp reçois les données et peu les interceptées grace à</li>
+    <li class="p-1 mb-1">
+      <pre><code>
+<?= $phpSnippetJson; ?>
+      </code></pre>
+    </li>
+    <li class="p-1 mb-1"> et si la demande répond à une condition</li>
+    <li class="p-1 mb-1">
+      <pre><code>
+<?= $phpSnippetCondition; ?>
+      </code></pre>
+    </li>
+
+    <li class="p-1 mb-1"> Alors php traite les information et retournera les résultat sous forme JSON json_encode($data)</li>
+    <li class="p-1 mb-1"> Javascript récupéré dans le headers avec 'res.json()' les informations retournée par php </li>
+    <li class="p-1 mb-1"> On peu maintenant affiché le résultat dans la console.</li>
+  </ul>
 
   <button class="btn btn-success p-2" id="postJs">Post</button>
   <!-- ADD SCRIPT -->

@@ -9,7 +9,7 @@
 </head>
 
 <body class="d-flex flex-column justify-content-center align-items-center">
-  <p class="p-2 mb-2">API fetch JS avec la méthode post avec un objet Json, header application/x-www-form-urlencoded, et réception des données avec PHP</p>
+  <p class="p-2 mb-2">API fetch JS avec la méthode post avec un objet Json, header application/x-www-form-urlencoded, et réception des données avec PHP avec $_POST[clé]</p>
   <h2 class="p-2 mb-2">Détails de cheminement</h2>
   <ul class="p-2 mb-2">
     <li class="p-1 mb-1"> Lors de l'appuie sur post</li>

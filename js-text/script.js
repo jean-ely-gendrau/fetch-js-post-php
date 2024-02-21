@@ -3,13 +3,16 @@
 // headers: "{Content-Type": "application/json",}
 // body: JSON.stringify(data),
 async function postJs({ slug, data }) {
-  const res = await fetch(`http://${window.location.hostname}js-text/${slug}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
+  const res = await fetch(
+    `http://${window.location.hostname}/js-text/${slug}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }
+  );
 
   const response = await res.text(); // res.text()
   return response;
@@ -20,7 +23,7 @@ const buttonPost = (e) => {
   e.preventDefault(); // Prevent default pour stopper l'action par défaut des touches
   postJs({
     slug: "jsPhp.php",
-    data: { id: 1, action: "test" },
+    data: { id: 1, action: "test" }, // Objet JSON
   }).then((data) => {
     console.log(data); // Affichage des données encodées en console
     let decode = JSON.parse(atob(data)); // Décode et parse les données
