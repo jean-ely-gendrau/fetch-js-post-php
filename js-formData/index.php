@@ -12,11 +12,11 @@
   <p class="p-2 mb-2">API fetch JS avec la méthode post avec avec FormData et réception des données avec PHP</p>
 
   <form class="d-flex flex-column mb-2" id="form">
-    <input class="w-50 p-2 mb-1" type="text" id="nom" name="nom" placeholder="votre nom">
-    <input class="w-50 p-2 mb-1" type="text" id="prenom" name="prenom" placeholder="votre prénom">
-    <input class="w-50 p-2 mb-1" type="email" id="email" name="email" placeholder="votre email">
-    <input class="w-50 p-2 mb-1" type="password" id="password" name="password" placeholder="votre mot de pass">
-    <input class="w-50 p-2 mb-1" type="password" id="passwordCompare" name="passwordCompare" placeholder="confirmer votre mot de pass">
+    <input class="w-100 p-2 mb-1" type="text" id="nom" name="nom" placeholder="votre nom">
+    <input class="w-100 p-2 mb-1" type="text" id="prenom" name="prenom" placeholder="votre prénom">
+    <input class="w-100 p-2 mb-1" type="email" id="email" name="email" placeholder="votre email">
+    <input class="w-100 p-2 mb-1" type="password" id="password" name="password" placeholder="votre mot de pass">
+    <input class="w-100 p-2 mb-1" type="password" id="passwordCompare" name="passwordCompare" placeholder="confirmer votre mot de pass">
     <button class="btn btn-success p-2 w-75" id="postJs">Post</button>
   </form>
 
