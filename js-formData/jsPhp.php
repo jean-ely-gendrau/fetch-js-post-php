@@ -12,6 +12,6 @@ if (isset($_POST)) {
   echo json_encode($returnData); // echo pour afficher la réponse de retour pour javascript
   exit(); // Nécessaire pour arrêter le script est évité toutes erreurs de traitement
 } else {
-  echo json_encode('false'); // echo pour afficher la réponse de retour pour javascript
+  echo json_encode('false'); // echo pour afficher la réponse erreur de retour pour javascript
   exit(); // Nécessaire pour arrêter le script est évité toutes erreurs de traitement
 }

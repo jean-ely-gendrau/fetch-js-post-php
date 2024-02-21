@@ -20,19 +20,19 @@ async function postJs({ slug, data }) {
 
 // button post data
 const buttonPost = (e) => {
-  e.preventDefault(); // Prevent default pour stopper l'action par défault des touches
+  e.preventDefault(); // Prevent default pour stopper l'action par default des touches
   postJs({
     slug: "jsPhp.php",
     data: { id: 1, action: "test" },
   }).then((data) => {
     console.log(data);
-    let stringRetunr = Object.entries(data).join(" - ").toString();
-    // On joint et on transfome en chaîne de caractère le résultat
+    let stringReturn = Object.entries(data).join(" - ").toString();
+    // On joint et on transforme en chaîne de caractère le résultat
     // des données traiter par php, affichage en console
-    console.log(stringRetunr);
+    console.log(stringReturn);
   });
 };
 
-const postButton = document.getElementById("postJs"); // Sélécteur de balise
+const postButton = document.getElementById("postJs"); // Sélecteur de balise
 
 postButton.addEventListener("click", (e) => buttonPost(e)); // écouteur d'événement

@@ -4,7 +4,7 @@
 // body: Object.entries(data).map(([key, val], index) => ....
 async function postJs({ slug, idForm }) {
   const form = document.getElementById(idForm);
-  // Si l'élélement existe
+  // Si l'élément existe
   if (form) {
     /* https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData
       lorsqu'il est spécifié, l' FormData objet sera rempli avec les form clés/valeurs
